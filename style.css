@@ -1,150 +1,229 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
 }
 
 body{
 
-    background:#f4f4f4;
-    padding:40px;
-    text-align:center;
+max-width:1000px;
+margin:auto;
+padding:20px;
+
+}
+
+header{
+
+text-align:center;
+margin-bottom:20px;
 
 }
 
 h1{
 
-    margin-bottom:40px;
-    color:#222;
+margin-bottom:10px;
 
 }
 
-.card{
+main{
 
-    background:#fff;
-    padding:30px;
-    margin:30px auto;
-    width:500px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+display:grid;
+gap:20px;
 
 }
 
-.card h2{
+.animation,
+.transition,
+.transform{
 
-    margin-bottom:10px;
-    color:#333;
-
-}
-
-.card p{
-
-    margin-bottom:25px;
-    color:#666;
+display:flex;
+align-items:center;
+height:170px;
+border-radius:10px;
 
 }
 
-/* ===================================
-        1. ANIMATION
-=================================== */
+.animation{
 
-.gradient-box{
-
-    width:180px;
-    height:180px;
-    margin:auto;
-    border-radius:15px;
-    background:linear-gradient(45deg,#ff4da6,#7b61ff,#00e676);
-    background-size:300% 300%;
-    animation:gradientMove 5s linear infinite;
+background:#f2faf4;
 
 }
 
-@keyframes gradientMove{
+.transition{
 
-    0%{
-
-        background-position:0% 50%;
-
-    }
-
-    25%{
-
-        background-position:100% 0%;
-
-    }
-
-    50%{
-
-        background-position:100% 100%;
-
-    }
-
-    75%{
-
-        background-position:0% 100%;
-
-    }
-
-    100%{
-
-        background-position:0% 50%;
-
-    }
+background:#f3f8fd;
 
 }
 
-/* ===================================
-        2. TRANSITION
-=================================== */
+.transform{
+
+background:#f8f4fd;
+
+}
+
+.animation-text,
+.transition-text,
+.transform-text{
+
+width:30%;
+padding:20px;
+
+}
+
+.animation-area,
+.transition-area,
+.transform-area{
+
+width:70%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#fff;
+border:1px solid #ddd;
+border-radius:10px;
+overflow:hidden;
+
+}
+
+.animation-title{
+
+color:#2ca450;
+
+}
+
+.transition-title{
+
+color:#197ada;
+
+}
+
+.transform-title{
+
+color:#8c51ba;
+
+}
+
+h3 span{
+
+display:inline-flex;
+justify-content:center;
+align-items:center;
+
+width:35px;
+height:35px;
+
+border-radius:50%;
+color:white;
+margin-right:8px;
+
+}
+
+.animation-title span{
+
+background:#2ca450;
+
+}
+
+.transition-title span{
+
+background:#197ada;
+
+}
+
+.transform-title span{
+
+background:#8c51ba;
+
+}
+
+/* Animation Box */
+
+.animation-box{
+
+width:100px;
+height:100px;
+border-radius:10px;
+overflow:hidden;
+
+animation:moveBox 3s infinite ease-in-out;
+
+}
+
+.animation-box img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+
+}
+
+@keyframes moveBox{
+
+0%{
+
+transform:translateX(-180px);
+
+}
+
+50%{
+
+transform:translateX(180px);
+
+}
+
+100%{
+
+transform:translateX(-180px);
+
+}
+
+}
+
+/* Button */
 
 .btn{
 
-    background:#1e88e5;
-    color:white;
-    border:none;
-    padding:18px 45px;
-    font-size:22px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:all .4s ease;
+padding:15px 40px;
+font-size:22px;
+border:none;
+border-radius:8px;
+background:#197ada;
+color:white;
+cursor:pointer;
+
+transition:.3s;
 
 }
 
 .btn:hover{
 
-    background:#2ecc71;
-    transform:scale(1.1);
+background:#2ca450;
+transform:scale(1.1);
 
 }
 
-/* ===================================
-        3. TRANSFORM
-=================================== */
+/* Transform Box */
 
 .box{
 
-    width:180px;
-    height:180px;
-    margin:auto;
-    background:repeating-linear-gradient(red, yellow);
-    border-radius:12px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:32px;
-    transition:.4s;
-    color: black;
-    font-style: italic;
-    font-size: 40px;
-    font-weight: bold;
+width:100px;
+height:100px;
+background:#8c51ba;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:10px;
+
+transition:.3s;
 
 }
 
-.box:hover{
+.transform-box:hover{
 
-    transform:rotate(180deg);
+transform:rotate(15deg);
 
 }
